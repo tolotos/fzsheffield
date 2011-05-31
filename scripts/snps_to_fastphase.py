@@ -68,7 +68,6 @@ snp_parser = SNPparser(snp_file,sheep_objects,sheep_names)
 sheep_objects = snp_parser.comparison()
 regions = extract_regions(sheep_objects)
 
-print len(regions)
 #=======================================================================
 #Assign Sequences to sheep
 for file in fasta_files:
@@ -80,35 +79,35 @@ for file in fasta_files:
             sheep.sequences = fasta.sequences
 #=======================================================================
 
-#os.mkdir("fastphase_input")
-#os.chdir("fastphase_input")
-#for name, region in regions.items():
-    #region_file = open(region.name+".genotype","w")
-    #region.store_positions()
-    #region.store_individuals()
-    ##print region.individuals
-    #for snp in region.snps:
-        #sorted_bases = sorted(snp.basecount.iteritems(), 
-                                  #key=operator.itemgetter(1), reverse=True)
-        #if sum(snp.basecount.values()) == 0:
-            #snp.genotype = None
-        #else:
-            #lr = snp.calc_genotype()
-            #if lr <= -3.84:
-                #snp.genotype = [sorted_bases[0][0],sorted_bases[1][0]]
-            #elif lr >= 3.84:
-                #snp.genotype = [sorted_bases[0][0],sorted_bases[0][0]]
-            #else:
-                #snp.genotype = None
-    #reg_print = region.print_fastphase()
+os.mkdir("fastphase_input")
+os.chdir("fastphase_input")
+for name, region in regions.items():
+    region_file = open(region.name+".genotype","w")
+    region.store_positions()
+    region.store_individuals()
+    #print region.individuals
+    for snp in region.snps:
+        sorted_bases = sorted(snp.basecount.iteritems(), 
+                                  key=operator.itemgetter(1), reverse=True)
+        if sum(snp.basecount.values()) == 0:
+            snp.genotype = None
+        else:
+            lr = snp.calc_genotype()
+            if lr <= -3.84:
+                snp.genotype = [sorted_bases[0][0],sorted_bases[1][0]]
+            elif lr >= 3.84:
+                snp.genotype = [sorted_bases[0][0],sorted_bases[0][0]]
+            else:
+                snp.genotype = None
+    reg_print = region.print_fastphase()
     
-    #region_file.write("\n"+str(reg_print[0]))
-    #region_file.write("\n"+str(reg_print[1]))
-    #region_file.write("\n"+str(reg_print[2])+" ")
-    #for i in reg_print[3]:
-        #region_file.write(str(i)+" ")
-    #for name, indiv  in reg_print[4].items():
-        #region_file.write("\n"+indiv[0])
-        #region_file.write("\n"+indiv[1])
-        #region_file.write("\n"+indiv[2])
-    #region_file.close()
+    region_file.write(str(reg_print[0]))
+    region_file.write("\n"+str(reg_print[1]))
+    region_file.write("\n"+str(reg_print[2])+" ")
+    for i in reg_print[3]:
+        region_file.write(str(i)+" ")
+    for name, indiv  in reg_print[4].items():
+        region_file.write("\n"+indiv[0])
+        region_file.write("\n"+indiv[1])
+        region_file.write("\n"+indiv[2])
+    region_file.close()
