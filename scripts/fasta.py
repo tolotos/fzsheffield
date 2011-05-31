@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-
 class Fasta:
     
     def __init__(self,fasta_file):
