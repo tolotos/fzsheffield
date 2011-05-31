@@ -102,19 +102,20 @@ class Region:
                     print "-",
     # Prints input format required by fastphase
     def print_fastphase(self):
+        print_list = []
         pos_list = []
+        indiv = {}
         for position, snp in self.positions.items():
             pos_list.append(int(position))
         pos_list.sort()
-        print len(self.individuals)
-        print len(pos_list)
-        print "P",
-        for i in pos_list:
-            print i,
+        print_list.append(len(self.individuals))
+        print_list.append(len(pos_list))
+        print_list.append("P")
+        print_list.append(pos_list)
         for sheep,snp_dict in self.individuals.items():
             line1 = ""
             line2 = ""
-            print "\n#"+sheep.name
+            indiv[sheep.name] = ["#"+sheep.name]
             for i in pos_list:
                 #ref_base = self.positions[i][0].ref_base
                 if snp_dict.has_key(i):
@@ -134,10 +135,10 @@ class Region:
                         
                         line1 += "?"#sheep.sequences[self.name][i-1]
                         line2 += sheep.sequences[self.name][i-1]     
-            print line1
-            print line2,
-            
-        
+            indiv[sheep.name].append(line1)
+            indiv[sheep.name].append(line2)
+        print_list.append(indiv)
+        return print_list
         
         
         
