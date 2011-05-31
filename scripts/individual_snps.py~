@@ -42,10 +42,10 @@ def parse_snps(snp_file):
         if not line[0] == "Ref_Seq":
             #Create a SNP object and fill it with content
             current_snp = SNP(line[0],line[1],line[2],line[3],line[4])
-            current_snp.basecount["A"] = line[5]
-            current_snp.basecount["C"] = line[6]
-            current_snp.basecount["G"] = line[7]
-            current_snp.basecount["T"] = line[8]
+            current_snp.basecount["A"] = float(line[5])
+            current_snp.basecount["C"] = float(line[6])
+            current_snp.basecount["G"] = float(line[7])
+            current_snp.basecount["T"] = float(line[8])
             current_snp.sheep = sheep
             sheep.snps.append(current_snp)
             #Assign the SNP to the individual it belongs to
@@ -85,10 +85,18 @@ for name, region in regions.items():
     region.store_positions()
     region.store_individuals()
     #print region.individuals
+    for snp in region.snps:
+        sorted_bases = sorted(snp.basecount.iteritems(), 
+                                  key=operator.itemgetter(1), reverse=True)                         
+        lr = snp.calc_genotype()
+        if lr <= -3.84:
+            snp.genotype = [sorted_bases[0][1],sorted_bases[1][1]]
+        elif lr >= 3.84:
+            snp.genotype = [sorted_bases[0][1],sorted_bases[0][1]]
+        else:
+            snp.genotype = None
+      
     region.print_fastphase()
-            
-        
-            
             
             
             

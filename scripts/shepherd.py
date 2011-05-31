@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+import math
+from rpy import *
+import operator
+     
 class Sheep:
     def __init__(self,name):
         self.name = name
@@ -7,18 +11,50 @@ class Sheep:
         self.numreads = None
         self.regions = None # List of all Regions 
         self.snps = []
+        self.sequences = None # {Region:sequence}
 
 class SNP:
     #Ref_Seq;Ref_Position;Ref_Base;Mutant_base;HQ_Depth;A;C;G;T
-   def __init__(self,ref_seq,ref_position,ref_base,mutant_base,hq_depth):
+    def __init__(self,ref_seq,ref_position,ref_base):
         self.position = int(ref_position)
         self.region = ref_seq
-        self.mutant_base = mutant_base
+        self.mutant_base = None
         self.ref_base = ref_base
-        self.hq_depth =int(hq_depth)
+        self.hq_depth = None
         self.basecount = {"A":0,"C":0,"G":0,"T":0}
         self.sheep = None
+        #SNP genotype is stored as [(base,count)], len ==1 --> homozygote
+        #len == 2 --> heterozygote
+        #None == Genotype unknown!
+        self.genotype = ()
 
+    #Version 2 with error rate
+    def calc_genotype(self):
+        fac = math.factorial
+        ln = math.log
+        n = sorted(self.basecount.values(), reverse=True)
+        all_reads = float(sum(n))
+        #Part1
+        part1 = n[0]*ln(n[0]/all_reads)
+        #Part2
+        if all_reads == n[0]:
+            part2 = 0
+        else:
+            part2 = (all_reads-n[0])*ln((all_reads-n[0])/(3*all_reads))
+        #Part3
+        ln_part3 = (n[0]+n[1])/(2*all_reads)
+        part3 = (n[0]+n[1])*ln(ln_part3)
+        #Part4
+        ln_part4 = (n[2]+n[3])/(2*all_reads)
+        if ln_part4 == 0.0:
+            part4 = 0
+        else:
+            part4 = (n[2]+n[3])*ln(ln_part4)
+
+        lrt = 2*(part1+part2-part3-part4)
+        #p_value = r.pchisq(lrt,df=1,lower_tail=False)
+        return lrt
+   
 class Region:
     def __init__(self,name):
         self.name = name
@@ -80,14 +116,29 @@ class Region:
             line2 = ""
             print "\n#"+sheep.name
             for i in pos_list:
-                ref_base = self.positions[i][0].ref_base
+                #ref_base = self.positions[i][0].ref_base
                 if snp_dict.has_key(i):
                     #print snp_dict[i].position,
-                    line1 += "?"#snp_dict[i].ref_base
-                    line2 += snp_dict[i].mutant_base
+                    if snp_dict[i].genotype != None:
+                        #print sheep.sequences[self.name][i-1]
+                        line1 += snp_dict[i].genotype[0]
+                        line2 += snp_dict[i].genotype[1]
+                    elif snp_dict[i].genotype == None:
+                        line1 += "?"
+                        line2 += "?"
                 else:
-                    line1 += "?"#ref_base
-                    line2 += ref_base     
+                    if sheep.sequences[self.name][i-1] == "N":
+                        line1 += "?"
+                        line2 += "?"
+                    else:
+                        
+                        line1 += "?"#sheep.sequences[self.name][i-1]
+                        line2 += sheep.sequences[self.name][i-1]     
             print line1
             print line2,
+            
+        
+        
+        
+        
 
