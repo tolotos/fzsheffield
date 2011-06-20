@@ -1,12 +1,8 @@
 #!/usr/bin/python
 
 from optparse import OptionParser
-import os
-import re
-import glob
-from shepherd import *
-from fasta import *
-from snp_parser import *
+import sheperd, fasta, snp_parser, os, re, glob
+
 
 #=======================================================================
 #Command line options===================================================
