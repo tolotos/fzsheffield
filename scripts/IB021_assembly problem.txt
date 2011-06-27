@@ -1,0 +1,18 @@
+Assembly vs 110 reference regions:
+bowtie -p 1 -a -m 1 --sam ../sheep_index/ref_seq_110 -1 IB021_1.txt -2 IB021_2.txt ib021.sam
+# reads processed: 4940125
+# reads with at least one reported alignment: 1815 (0.04%)
+# reads that failed to align: 4938308 (99.96%)
+# reads with alignments suppressed due to -m: 2 (0.00%)
+Reported 1815 paired-end alignments to 1 output stream(s)
+bowtie -p 1 -a -m 1 --sam ../sheep_index/ref_seq_110 -1 IB021_1.txt -2    740.71s user 12.93s system 76% cpu 16:31.22 total
+
+Assembly vs whole sheep genome:
+
+bowtie -p 10 -a -m 1 --chunkmbs 512 --sam ../sheep_index/sheep_chr_all -1 IB021_1.txt -2 IB021_2.txt ib021.sam
+# reads processed: 4940125
+# reads with at least one reported alignment: 3188 (0.06%)
+# reads that failed to align: 4936913 (99.93%)
+# reads with alignments suppressed due to -m: 24 (0.00%)
+Reported 3188 paired-end alignments to 1 output stream(s)
+bowtie -p 10 -a -m 1 --chunkmbs 512 --sam ../sheep_index/sheep_chr_all -1  -2  8327.88s user 13.80s system 995% cpu 13:57.89 total

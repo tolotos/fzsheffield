@@ -1,0 +1,290 @@
+BLASTN 2.2.21 [Jun-14-2009]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= OvisASIP_BAC
+         (720 letters)
+
+Database: sheep_chr_all.fa 
+           27 sequences; 2,571,058,304 total letters
+
+Searching..................................................done
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+OAR13                                                                1374   0.0  
+
+>OAR13
+          Length = 83073868
+
+ Score = 1374 bits (693), Expect = 0.0
+ Identities = 711/720 (98%)
+ Strand = Plus / Minus
+
+                                                                            
+Query: 1        aactgggagcttctctctctcttgctttgttaatgtataagaagcaatgctatttcagat 60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035636 aactgggagcttctctctctcttgctttgttaatgtataagaagcaatgctatttcagat 63035577
+
+                                                                            
+Query: 61       ttacaataagaacagcaagagtgacgatctcccattttatagagagaaatgcagactttt 120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035576 ttacaataagaacagcaagagtgacgatctcccattttatagagagaaatgcagactttt 63035517
+
+                                                                            
+Query: 121      cccaatgtgcagaatcatgtccccagcctagcctggaggacccatcattttcctgcgtgt 180
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035516 cccaatgtgcagaatcatgtccccagcctagcctggaggacccatcattttcctgcgtgt 63035457
+
+                                                                            
+Query: 181      gtgttctctgcccggatagttccagctctgtccggtctcgggtctgatgtttgcatcctt 240
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035456 gtgttctctgcccggatagttccagctctgtccggtctcgggtctgatgtttgcatcctt 63035397
+
+                                                                            
+Query: 241      cattccatgctggttgtgtcactgcaggcgcaatgtgggtcttcagtggagaaagttcct 300
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035396 cattccatgctggttgtgtcactgcaggcgcaatgtgggtcttcagtggagaaagttcct 63035337
+
+                                                                            
+Query: 301      tggaaaggagttttgagacatttgaaagacggaagattgtaagtagacaagcgggtcggg 360
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035336 tggaaaggagttttgagacatttgaaagacggaagattgtaagtagacaagcgggtcggg 63035277
+
+                                                                            
+Query: 361      gtagggggtggccccacctgtgctggcccttgagccccactgtcctcacctccaaggaca 420
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035276 gtagggggtggccccacctgtgctggcccttgagccccactgtcctcacctccaaggaca 63035217
+
+                                                                            
+Query: 421      gagaaaaatggtggttatcagggctaaggaaacggcttcccattgtttagtcacataacc 480
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035216 gagaaaaatggtggttatcagggctaaggaaacggcttcccattgtttagtcacataacc 63035157
+
+                                                                            
+Query: 481      tctctctagactctcttgcgtacaacaggccttgttattannnnnnnnnaaattatcttc 540
+                ||||||||||||||||||||||||||||||||||||||||         |||||||||||
+Sbjct: 63035156 tctctctagactctcttgcgtacaacaggccttgttattatttttttttaaattatcttc 63035097
+
+                                                                            
+Query: 541      ttgtaccactactgtttgcagtttcttctttcttgtttatggtaattcctttgggaagag 600
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035096 ttgtaccactactgtttgcagtttcttctttcttgtttatggtaattcctttgggaagag 63035037
+
+                                                                            
+Query: 601      ctctagttctgggggacactggcaggtgaaacctcagcttgtctatcttttctactggca 660
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63035036 ctctagttctgggggacactggcaggtgaaacctcagcttgtctatcttttctactggca 63034977
+
+                                                                            
+Query: 661      gggatgccctcggccaagcagggcaagtaggtgctatcactgagagcccttgcctttcaa 720
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63034976 gggatgccctcggccaagcagggcaagtaggtgctatcactgagagcccttgcctttcaa 63034917
+
+
+BLASTN 2.2.21 [Jun-14-2009]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= OviscASIP_C1
+         (900 letters)
+
+Database: sheep_chr_all.fa 
+           27 sequences; 2,571,058,304 total letters
+
+Searching..................................................done
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+OAR13                                                                1146   0.0  
+
+>OAR13
+          Length = 83073868
+
+ Score = 1146 bits (578), Expect = 0.0
+ Identities = 598/608 (98%)
+ Strand = Plus / Minus
+
+                                                                            
+Query: 1        gtaagggcgaatacgcttgttatggactatcttctacactgaaatctaacaaagttaatt 60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094570 gtaagggcgaatacgcttgttatggactatcttctacactgaaatctaacaaagttaatt 63094511
+
+                                                                            
+Query: 61       tttactttgttcagatccatttgtctgttttatatatttttcccagtgaaaagtgtattt 120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094510 tttactttgttcagatccatttgtctgttttatatatttttcccagtgaaaagtgtattt 63094451
+
+                                                                            
+Query: 121      cgatagagaacttttcattttgtaaatacactatgaattaccaggggnnnnnnnnnngca 180
+                |||||||||||||||||||||||||||||||||||||||||||||||          |||
+Sbjct: 63094450 cgatagagaacttttcattttgtaaatacactatgaattaccaggggaaaaaaaaaagca 63094391
+
+                                                                            
+Query: 181      taatccataaaatgaaaaattaataattggattgtatcaaaattgaaagcttttgttttg 240
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094390 taatccataaaatgaaaaattaataattggattgtatcaaaattgaaagcttttgttttg 63094331
+
+                                                                            
+Query: 241      caaagttcctgttaagagaataaaaggggaacttccccagtggtgcagtggctaagagtc 300
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094330 caaagttcctgttaagagaataaaaggggaacttccccagtggtgcagtggctaagagtc 63094271
+
+                                                                            
+Query: 301      caccttcgaatgcatggaattcaaggttcgattcctggtcagggaattaagatcctacgt 360
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094270 caccttcgaatgcatggaattcaaggttcgattcctggtcagggaattaagatcctacgt 63094211
+
+                                                                            
+Query: 361      gtctccaggcagctgagccccagggcctctgccagagagccagcgtgttctggagcacat 420
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094210 gtctccaggcagctgagccccagggcctctgccagagagccagcgtgttctggagcacat 63094151
+
+                                                                            
+Query: 421      gcaccacaactagagggaagcccatgagctgaaactaagacccgatgcagccatgaaaaa 480
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094150 gcaccacaactagagggaagcccatgagctgaaactaagacccgatgcagccatgaaaaa 63094091
+
+                                                                            
+Query: 481      ttttttaaaaaagaataaaagggaattccttggcagtcagtggttaggacttggtgattt 540
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094090 ttttttaaaaaagaataaaagggaattccttggcagtcagtggttaggacttggtgattt 63094031
+
+                                                                            
+Query: 541      cactgccatgggcctgggttcaatccctggttaggaaattaagatcctgaaatctgtctg 600
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 63094030 cactgccatgggcctgggttcaatccctggttaggaaattaagatcctgaaatctgtctg 63093971
+
+                        
+Query: 601      tgaaacac 608
+                ||||||||
+Sbjct: 63093970 tgaaacac 63093963
+
+
+BLASTN 2.2.21 [Jun-14-2009]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= OviscASIP_C3
+         (840 letters)
+
+Database: sheep_chr_all.fa 
+           27 sequences; 2,571,058,304 total letters
+
+Searching..................................................done
+
+ ***** No hits found ******
+
+
+BLASTN 2.2.21 [Jun-14-2009]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= OvisBTchr18_050
+         (380 letters)
+
+Database: sheep_chr_all.fa 
+           27 sequences; 2,571,058,304 total letters
+
+Searching..................................................done
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+OAR14                                                                 739   0.0  
+
+>OAR14
+          Length = 62261228
+
+ Score =  739 bits (373), Expect = 0.0
+ Identities = 380/381 (99%), Gaps = 1/381 (0%)
+ Strand = Plus / Minus
+
+                                                                            
+Query: 1        cccgccaggctcctctgtccatgggattctccaggcaagaatactggagtgggttgccat 60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540413 cccgccaggctcctctgtccatgggattctccaggcaagaatactggagtgggttgccat 49540354
+
+                                                                            
+Query: 61       ttccttcagagaattccaaagccagctgctgagactgtacactttcatcccacttatgtc 120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540353 ttccttcagagaattccaaagccagctgctgagactgtacactttcatcccacttatgtc 49540294
+
+                                                                            
+Query: 121      tgtgtcttcctagtcaggtgctgctgggtggcgaagatgaaccctgcccctgccctggac 180
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540293 tgtgtcttcctagtcaggtgctgctgggtggcgaagatgaaccctgcccctgccctggac 49540234
+
+                                                                            
+Query: 181      cctgtctggctctgggcttggaacacaaccagcttcagatcaatgatcaaagatgggtaa 240
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540233 cctgtctggctctgggcttggaacacaaccagcttcagatcaatgatcaaagatgggtaa 49540174
+
+                                                                            
+Query: 241      tttaaagactctctgggatttccctggctttccagtggttaagactctgtgtttccactg 300
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540173 tttaaagactctctgggatttccctggctttccagtggttaagactctgtgtttccactg 49540114
+
+                                                                            
+Query: 301      cagggaggtgaaggtatgatcactggtcagagaagatcccatactcgatgcggcaagacc 360
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct: 49540113 cagggaggtgaaggtatgatcactggtcagagaagatcccatactcgatgcggcaagacc 49540054
+
+                                     
+Query: 361      a-aaaatcataatttttaaaa 380
+                | |||||||||||||||||||
+Sbjct: 49540053 aaaaaatcataatttttaaaa 49540033
+
+
+  Database: sheep_chr_all.fa
+    Posted date:  Jun 20, 2011 11:38 AM
+  Number of letters in database: 2,571,058,304
+  Number of sequences in database:  27
+  
+Lambda     K      H
+    1.37    0.711     1.31 
+
+Gapped
+Lambda     K      H
+    1.37    0.711     1.31 
+
+
+Matrix: blastn matrix:1 -3
+Gap Penalties: Existence: 5, Extension: 2
+Number of Sequences: 27
+Number of Hits to DB: 102,529,582
+Number of extensions: 863478
+Number of successful extensions: 863478
+Number of sequences better than 1.0e-150: 2
+Number of HSP's gapped: 863478
+Number of HSP's successfully gapped: 3
+Length of database: 2,571,058,304
+X1: 11 (21.8 bits)
+X2: 15 (29.7 bits)
+X3: 50 (99.1 bits)
+S1: 21 (42.1 bits)
+S2: 272 (539.7 bits)

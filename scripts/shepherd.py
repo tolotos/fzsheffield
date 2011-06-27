@@ -121,17 +121,28 @@ class Region:
                     snp_iupac = sorted_bases[0][0]+sorted_bases[1][0]
                     if snp_iupac == "AG":
                         self.consensus += "R"
-                    elif snp_iupac == "CT" or "TC":
+                    elif snp_iupac == "GA":
+                        self.consensus += "R"
+                    elif snp_iupac == "CT":
                         self.consensus += "Y"
-                    elif snp_iupac == "GT" or "TG":
+                    elif snp_iupac ==  "TC":
+                        self.consensus += "Y"
+                    elif snp_iupac == "GT":
                         self.consensus += "K"
-                    elif snp_iupac == "AC" or "CA":
+                    elif snp_iupac == "TG":
+                        self.consensus += "K"
+                    elif snp_iupac == "AC":
                         self.consensus += "M"
-                    elif snp_iupac == "GC" or "CG":
+                    elif snp_iupac == "CA":
+                        self.consensus += "M"
+                    elif snp_iupac == "GC":
                         self.consensus += "S"
-                    elif snp_iupac == "AT" or "TA":
+                    elif snp_iupac == "CG":
+                        self.consensus += "S"
+                    elif snp_iupac == "AT":
                         self.consensus += "W"
-                        
+                    elif snp_iupac == "TA":
+                        self.consensus += "W"
                 elif lr >= float(cutoff):
                     pos.genotype = [sorted_bases[0][0],sorted_bases[0][0]]
                     if sorted_bases[0][0] != self.ref_seq[pile.pos]:
@@ -140,7 +151,6 @@ class Region:
                         self.consensus += sorted_bases[0][0]
                     else:
                         self.consensus += (sorted_bases[0][0])
-                        
                 else:
                     pos.genotype = None
                     self.consensus+="N"

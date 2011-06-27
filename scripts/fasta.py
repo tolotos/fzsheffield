@@ -13,9 +13,7 @@ class Fasta:
                 name = line[1:].rstrip()
                 self.sequences[name] = ""
             else:
-                self.sequences[name] += line.rstrip().upper()
-        #for name,seq in self.sequences.items():
-            #self.sequences[name] = seq.capitalize()
+                self.sequences[name] += line.rstrip()
             
         return self.sequences
     
@@ -24,4 +22,8 @@ class Fasta:
     
     def get_sequences(self):
         return self.load().values()
+        
+    def capitalise(self):
+        for name, sequence in self.sequences.items():
+            self.sequences[name] = sequence.upper()
 

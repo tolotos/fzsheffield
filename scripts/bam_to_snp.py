@@ -45,7 +45,7 @@ for bam in bam_files:
         cur_regio = sheep_objects[name].regions[-1]
         cur_regio.ref_seq = fasta.sequences[cur_regio.name]
         cur_regio.length = len(cur_regio.ref_seq)
-        cur_regio.get_snps(10.83,bam) # P=0.001 = 10.83; P=0.05 = 3.84
+        cur_regio.get_snps(3.84,bam) # P=0.001 = 10.83; P=0.05 = 3.84
         #if len(cur_regio.snps) == 0:
             #print "Region %s has no valid snps!" % (cur_regio.name)
         #else:
@@ -73,8 +73,9 @@ for sheep in sheep_objects.values():
     sheep_names.append(sheep.name)
 print
 for catalog in catalogs:
-    for pos, site in catalog.sites.items():
+    for pos in sorted(catalog.sites.iterkeys()):
         print "M", catalog.name+"_"+str(pos),
+        site = catalog.sites[pos]
         for sheep_name in sheep_names:
             if site[sheep_name].genotype == None:
                 print "N", "N",
